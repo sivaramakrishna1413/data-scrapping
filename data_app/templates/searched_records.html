@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Title</th>
+      <th scope="col">price</th>
+      <th scope="col">rating</th>
+      <th scope="col">Availability</th>
+      <th scope="col">Category</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% if books %}
+  {% for record in books %}
+    <tr>
+<!--      <th scope="row"></th>-->
+      <td>{{ record.id }}</td>
+      <td>{{ record.title }}</td>
+      <td>{{ record.price }}</td>
+      <td>{{ record.rating }}</td>
+      <td>{{ record.availability }}</td>
+      <td>{{ record.category }}</td>
+      <td>{{ record.description }}</td>
+    </tr>
+  {% endfor %}
+  {% else %}
+  <h5>No books found</h5>
+  {% endif %}
+  </tbody>
+</table>
+{% endblock content %}

@@ -1,0 +1,8 @@
+<!-- templates/scrape_books.html -->
+{% extends 'base.html' %}
+{% block content %}
+  <body>
+    <h1>Scrape Books</h1>
+    <button onclick="window.location.href='{% url 'scrape_books' %}'">Start Scraping</button>
+  </body>
+{% endblock content %}
